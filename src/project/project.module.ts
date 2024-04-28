@@ -6,13 +6,11 @@ import { UserModule } from '../user/user.module';
 import { ProjectEmployeeModule } from './ProjectEmployee/project-employee.module';
 import { ProjectController } from './project.controller';
 import { Project } from './entities/project.entity';
-import { ProjectUpdateModule } from './ProjectUpdate/project-update.module';
 
 @Module({
   imports: [
     TypeOrmModule.forFeature([Project]),
     ProjectEmployeeModule,
-    ProjectUpdateModule,
     UserModule,
   ],
   controllers: [ProjectController],
